@@ -1,0 +1,158 @@
+body{
+    background-color: #1e202b;
+    color: #bfc1c8;
+    background-image: url(../imgs/body-background.gif);
+}
+.header-container , .hero , .weather-card ,
+.nextday-weather-card , .nextday2-weather-card , 
+.social-icons {
+    z-index: 99999;
+}
+.navbar-toggler{
+    background-color: rgba(255, 0, 55, 0.596);
+}
+header{
+    background-image: url(../imgs/body-background.gif);
+}
+.header-layer{
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 222, 0.2);
+}
+.logo-content span{
+    font-size: 10px;
+
+}
+.logo-content h1{
+    font-size: 20px;
+    margin: 0px;
+}
+.navbar-nav a {
+    padding: 5px 25px;
+    font-weight: 500;
+    color: rgba(31, 164, 212, 0.957);
+    text-decoration: none;
+    border: 2px #1e202b solid;
+}
+.navbar-nav a:hover{
+    transition: all .4s ease;
+    color: white;
+    border: 2px #009ad8 solid;
+}
+.hero {
+    background-image: url(../imgs/bg-2.gif);
+    background-position:center ;
+    min-height: 350px ;
+}
+.hero-layer{
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 222, 0.2);
+}
+.find{
+    background-color: #009ad8;
+    color: white;
+    border: 1px #009ad8 solid;
+    padding: 10px 38px;
+    width: max-content;
+    top: 5px ;
+    right: 7px ;
+}
+.find-location{
+    padding:15px 0px 15px 12px; 
+    background-color: #1e202b;
+    border: 1px solid transparent;
+}
+.weather-container{
+    margin: auto;
+}
+.weather-card{
+    border: 1px solid transparent;
+    border-radius: 9px;
+    background-size: cover;
+    background-position: center center;
+    min-width: 34%;
+
+}
+.current-weather{
+    background-color: rgba(255, 25, 0, 0.491);
+}
+.degree{
+    font-size: 4rem;
+}
+.nextday-weather-card{
+    border-top: 1px solid transparent;
+    border-radius: 9px;
+    background-size: cover;
+    background-position: center center;
+    min-height: 400px;
+    min-width: 31%;
+
+}
+.nextday-weather{
+    background-color: rgba(255, 0, 55, 0.596);
+    border: 1px solid transparent;
+    
+}
+.nextday2-weather-card{
+    border-top: 1px solid transparent;
+    border-radius: 9px;
+    background-size: cover;
+    background-position: center center;
+    min-height: 400px;
+    min-width: 31%;
+
+}
+
+footer{
+    background-image: url(../imgs/body-background.gif);
+}
+.footer-layer{
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background-color: rgba(0, 0, 222, 0.2);
+    
+    
+}
+
+.Subscribe{
+    background-color: #009ad8;
+    color: white;
+    border: 1px #009ad8 solid;
+    padding: 10px 38px;
+    width: max-content;
+    top: 5px ;
+    left: 57% ;
+
+}
+.footer-icons{
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer-icons i{
+    width: 50px;
+    height: 50px;
+    font-size: 2rem;
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer-icons a {
+    text-decoration: none;
+}
+.footer-icons i:hover {
+    transition: all 0.3s ease-in-out;
+    background-color: #009ad8;
+    color: white;
+}
+

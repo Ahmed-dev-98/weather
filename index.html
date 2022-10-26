@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="brower-tab-icon.png">
+
+    <title>WeatherSite</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+            <!------------------------ start header section ------------------------>
+
+    <header class=" py-4 d-flex position-relative">
+        <div class="header-layer position-absolute"></div>
+        <div class="header-container container d-flex justify-content-between align-items-center">
+                        <!---------- start logo ----------->
+            <div class=" logo-container d-flex ">
+                <a href="#"> <img src="imgs/logo@2x.png" class="mx-2" width="70px" height="40px" alt=""> </a>
+                <div class="logo-content">
+                    <h1>weather</h1>
+                    <span>tagline goes here</span>
+                </div>
+            </div>
+            <!---------- end logo ----------->
+
+            <!---------- start navbar ----------->
+                <nav class="navbar navbar-expand-lg bg-transparent">
+                    <div class="container-fluid">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-light-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav" >
+                                <li class="nav-item  mx-1">
+                                    <a class="nav-link   rounded-pill active" aria-current="page" href="index.html">Home</a>
+                                </li>
+                                <li class="nav-item mx-1">
+                                    <a class="nav-link   rounded-pill" href="#">News</a>
+                                </li>
+                                <li class="nav-item mx-1">
+                                    <a class="nav-link   rounded-pill" href="#">Live cameras</a>
+                                </li>
+                                <li class="nav-item mx-1">
+                                    <a class="nav-link   rounded-pill" href="#">Photos</a>
+                                </li>
+                                <li class="nav-item mx-1">
+                                    <a class="nav-link   rounded-pill" href="">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            <!---------- end navbar ----------->
+
+    
+    </div>
+    </header>
+<!--------------------- end header --------------------------->
+
+<!--------------------- start hero section --------------------------->
+    <section class="hero-section position-relative">
+        <div class="hero-layer position-absolute"></div>
+<!--------------------- start search bar --------------------------->
+        <div class="hero py-5">
+            <div class="container search-bar">
+                <form action="" class="position-relative form mx-auto w-100 ">
+                    <input type="text" placeholder=" &#xF002; Find Your Location.." class="find-location w-100  rounded-pill" name="" id="search">    
+                    <input type="button" class=" find position-absolute  rounded-pill " value="Find">
+                </form>
+            </div>
+    </div>
+<!--------------------- end search bar --------------------------->
+
+<!--------------------- start forcast container --------------------------->
+    <div class="weather-container container  ">
+        <div class="d-flex row gy-2   mx-auto justify-content-between  bg-dark " id="forecast">
+            <!--------------------- start forcast 1st day --------------------------->
+
+            <div class="weather-card col-md-3 col-sm-12 px-0 mt-0 mb-1  text-white   d-flex flex-column justify-content-between bg-black "  id="currentWeatherCard">
+                <div class="current-weather w-100 rounded-2 d-flex justify-content-between mb-4">
+                    <h3 class="mx-1 " id="currnetDay"></h3>
+                    <span class="mx-1 fs-4 fw-bold text-dark" id="currentDate"></span>
+                </div>
+                <div class="current-weather-degree ">
+                    <h2 class="mx-2 fw-bolder fs-2" id="city" ></h2>
+                    <div class="text-center mx-3">
+                        <h4 class="degree fw-bolder" id="currentDegree" ></h3>
+                            <img id="today-icon" width="90"/>
+                    </div>
+                    <p class="mx-2 text-danger fs-3 fw-bold " id="currentState"></p>
+                </div>
+                <div class="current-weather-footer fw-semibold  w-100 d-flex justify-content-between">
+                    <i class="fas fa-umbrella pr-1 fs-3 text-danger"></i>
+                    <p class="mx-2" id="currentHumidty"><span>%</span></p>
+                    <i class="fas fa-wind pl-3 pr-1 fs-3 text-danger"></i>
+                    <p class="mx-2" id="currentWind"><span> </span></p>
+                    <i class="far fa-compass pl-3 pr-1 fs-3 text-danger"></i>
+                    <p class="mx-2" id="currentCompass"><span></span></p>
+                
+                </div>
+                </div>
+            <!--------------------- end forcast 1st day --------------------------->
+
+            <!--------------------- start forcast 2nd day --------------------------->
+            <div id="tomorowbg" class="nextday-weather-card col-md-3 col-sm-12 mt-0 mb-1 px-0 text-white bg-dark d-flex flex-column justify-content-between align-items-center bg-black ">
+                <div class="nextday-weather  w-100 d-flex justify-content-between rounded-2  mb-4">
+                    <h3 class="mx-1  " id="nextDay"> </h3>
+                    <span class="mx-1 fs-4 fw-semibold text-dark" id="nextDate"> </span>
+                </div>
+                <div class="nextday-weather-degree w-100 ">
+                    <div class="text-end mx-3 d-flex flex-column justify-content-between align-items-center">
+                        <img id="nextDayIcon" width="90"/>
+                        <h4 class="degree fw-bolder " id="nextDayMaxDegree"> &deg; C</h3>
+                        <h4 class="degree fw-bolder fs-5 " id="nextDayMinDegree"> &deg; C</h3>
+                            <p class=" text-center text-danger fs-3 fw-bold " id="nextState"> </p>
+
+
+                    </div>
+                </div>
+                <div class="nextday-weather-footer fw-semibold  w-100 d-flex justify-content-around">
+                    <div class="d-flex">
+                        <i class="fas fa-umbrella pr-1 fs-3 text-warning"></i>
+                        <p class="mx-2" id="nextHumidty"><span></span></p>
+                    </div>
+                    <div class="d-flex"><i class="fas fa-wind pl-3 pr-1 fs-3 text-warning"></i>
+                        <p class="mx-2" id="nextWind"><span></span></p>
+                    </div>
+                
+                </div>
+            </div>
+            <!--------------------- end forcast 2nd day --------------------------->
+
+            <!--------------------- start forcast 3rd day --------------------------->
+            <div  id="nextDaybg"  class="nextday2-weather-card col-md-3 col-sm-12 mt-0 mb-1 px-0  text-white bg-dark d-flex flex-column justify-content-between  bg-black ">
+                <div class="nextday-weather w-100 d-flex justify-content-between  mb-4 rounded-2">
+                    <h3 class="mx-1 " id="next2dayDay"></h3>
+                    <span class="mx-1 fs-4 fw-semibold text-dark " id="next2dayDate"></span>
+                </div>
+                <div class="next2day-weather-degree ">
+                    <div class="text-end mx-3 d-flex flex-column justify-content-between align-items-center">
+                        <img id="nex2tDayIcon" width="90"/>
+                        <h4 class="degree fw-bolder " id="next2DayMaxDegree"> &deg; C</h3>
+                        <h4 class="degree fw-bolder fs-5 " id="next2DayMinDegree"> &deg; C</h3>
+                            <p class=" text-center text-danger fs-3 fw-bold " id="next2dayState"> </p>
+                    </div>
+                </div>
+                <div class="nextday-weather-footer fw-semibold  w-100 d-flex justify-content-around">
+                    <div class="d-flex">
+                        <i class="fas fa-umbrella pr-1 fs-3 text-warning"></i>
+                        <p class="mx-2" id="next2Humidty"><span></span></p>
+                    </div>
+                    <div class="d-flex"><i class="fas fa-wind pl-3 pr-1 fs-3 text-warning"></i>
+                        <p class="mx-2" id="next2Wind"><span></span></p>
+                    </div>
+                
+                </div>
+            </div>
+            <!--------------------- end forcast 3rd day --------------------------->
+
+        </div>
+
+    </div>
+<!--------------------- end forcast container --------------------------->
+
+    </section>
+<!--------------------- end hero section --------------------------->
+
+<!--------------------- start footer  --------------------------->
+
+    <footer class="py-5 position-relative">
+        <div class="footer-layer position-absolute"></div>
+        <div class="footer-container container">
+            <div class="footer-content row">
+                <div class="footer-input  col-md-8  mb-4">
+                    <form action="" class="position-relative form mx-auto  ">
+                        <input type="text" placeholder=" &#xF002; Find Your Location.." class="find-location w-100  rounded-pill" name="" id="search">    
+                        <input type="button" class=" find position-absolute  rounded-pill " value="Subscribe">
+                    </form>
+    
+                    </div>
+                <div class="social-icons d-flex col-md-3 mt-  ">
+                    <div class="footer-icons mx-1 bg-dark fs-3 rounded-circle"> <a href=""><i class="fa-brands fa-facebook  rounded-circle "></i></a></div>
+                    <div class="footer-icons mx-1 bg-dark fs-3 rounded-circle"> <a href=""><i class="fa-brands fa-twitter rounded-circle"></i></a></div>
+                    <div class="footer-icons mx-1 bg-dark fs-3 rounded-circle"> <a href=""><i class="fa-brands fa-google rounded-circle"></i></a> </div>
+                    <div class="footer-icons mx-1 bg-dark fs-3 rounded-circle"> <a href=""><i class="fa-brands fa-pinterest rounded-circle"></i></a></div>
+
+                </div>
+            </div>
+            <p class="footer-p py-5 text-muted">Copyright 2014 Company name. Designed by Themezy. All rights reserved</p>
+        </div>
+    </footer>
+<!--------------------- end footer  --------------------------->
+
+
+
+
+
+
+
+
+
+
+
+<script src="js/index.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
